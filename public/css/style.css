@@ -1,0 +1,105 @@
+body {
+    background-color: #EEF5FF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15%;
+}
+
+.all_informations {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 30%;
+    padding: 35px;
+
+}
+
+label {
+    padding: 0;
+    margin: 0;
+}
+
+input, button {
+    background-color: #B4D4FF;
+    padding: 7px;
+    margin-top: 2px;
+    border-radius: 5px;
+    border: 1px solid #0F1035;
+}
+
+.credit_card {
+    display: grid;
+    gap: 30px;
+    grid-template-areas:
+    "h2 h2 h2"
+    "numbem numbem numbem"
+    "date date csc"
+    "name name name"
+    "numerocard numerocard numerocard"
+    "button button button "
+    ;
+}
+
+
+
+p {
+    color: #181616;
+    font-size: medium;
+    margin:0;
+    padding: 0;
+}
+
+h2 {
+    grid-area: h2;
+    text-align: center;
+    color: #181616;
+}
+
+span {
+    grid-area: span;
+}
+
+.name {
+    grid-area: name;
+}
+
+.numbem {
+    grid-area: numbem;
+}
+
+.date {
+    grid-area: date;
+}
+
+
+.csc {
+    grid-area: csc;
+}
+
+button {
+    grid-area: button;
+
+}
+
+.numerocard {
+    grid-area: numerocard;
+
+}
+
+button:hover {
+    scale: 1.05;
+    cursor: pointer;
+}
+
+a {
+    color: #000000;
+    font-size: large;
+    text-decoration: none;
+}
+
+.tamanho {
+    width: 100%;
+}
+

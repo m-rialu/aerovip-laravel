@@ -1,0 +1,27 @@
+div:nth-child(22){
+    width: 141px;
+     height: 24px;
+      left: 1035px;
+     top: 288px;
+      position: absolute;
+       color: #FFFDFD;
+        font-size: 20px;
+         font-family: Arial;
+          font-weight: 400;
+           word-wrap: break-word;
+           cursor:pointer;
+}
+
+div:nth-child(23){
+    width: 141px;
+     height: 24px;
+      left: 1035px;
+       top: 516px;
+        position: absolute;
+         color: #FFFDFD;
+          font-size: 20px;
+           font-family: Arial;
+            font-weight: 400;
+             word-wrap: break-word;
+             cursor: pointer;
+}

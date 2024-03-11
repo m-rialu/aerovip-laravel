@@ -1,0 +1,41 @@
+div:first-child {
+    width: 1330px;
+    height: 1156px;
+    background: white;
+}
+
+div:nth-child(2) {
+    width: 1330px;
+    height: 47px;
+    left: 0px;
+    top: 0px;
+    position: absolute;
+    background: #d9d9d9;
+}
+
+div:nth-child(11) {
+    width: 105px;
+    height: 26px;
+    left: 324px;
+    top: 589px;
+    position: absolute;
+    color: #7a7272;
+    font-size: 13px;
+    font-family: Lemonada;
+    font-weight: 380;
+    word-wrap: break-word;
+}
+
+div:nth-child(18) {
+    width: 160px;
+    height: 27px;
+    left: 997px;
+    top: 558px;
+    position: absolute;
+    color: white;
+    font-size: 16px;
+    font-family: Lemon;
+    font-weight: 400;
+    word-wrap: break-word;
+    cursor: pointer;
+}
