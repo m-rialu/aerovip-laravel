@@ -25,7 +25,7 @@
         <div style="width: 321px; height: 54px; left: 478px; top: 572px; position: absolute; background: #FFF6F6; border-radius: 32px; border: 1px rgba(132.81, 118.98, 118.98, 0.50) solid"></div>
         <div style="width: 232px; height: 19px; left: 515px; top: 589px; position: absolute; color: #090909; font-size: 13px; font-family: Lemonada; font-weight: 380; word-wrap: break-word">1 passageiro, Econômica</div>
         <div style="width: 276px; height: 56px; left: 930px; top: 541px; position: absolute; background: #ECB140; border-radius: 57.50px"></div>
-        <div class="botao"><a href="/voos">Encontrar  voos</a></div>
+        <div class="botao"><a href="{{route('user.register')}}">Encontrar  voos</a></div>
         <div style="width: 292px; height: 29px; left: 931px; top: 470px; position: absolute; color: #7E7676; font-size: 13px; font-family: Lemonada; font-weight: 380; word-wrap: break-word">ida e volta&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Só ida</div>
         <div style="width: 17px; height: 17px; left: 1013px; top: 475px; position: absolute; background: #D9D9D9"></div>
         <div style="width: 17px; height: 17px; left: 1206px; top: 475px; position: absolute; background: #D9D9D9"></div>

@@ -31,7 +31,7 @@
         <div style="width: 234px; height: 72px; left: 1017px; top: 437px; position: absolute; color: black; font-size: 20px; font-family: Arial; font-weight: 400; word-wrap: break-word">Valor total<br/>R$1.230,76</div>
         <div style="width: 212px; height: 56px; left: 974px; top: 272px; position: absolute; background: #ECB140; border-radius: 57.50px"></div>
         <div style="width: 212px; height: 56px; left: 974px; top: 500px; position: absolute; background: #ECB140; border-radius: 57.50px"></div>
-        <div class="botao" id="pagar">Comprar</div>
+        <div class="botao" id="pagar"><a href="{{route('payment')}}">Comprar</a></div>
         <div class="botao" id="pagar2">Comprar</div>
       </div>
       <script>

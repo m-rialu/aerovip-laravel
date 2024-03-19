@@ -3,6 +3,7 @@
 use App\Http\Controllers\FlightsController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PaymentController;
+use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\SuccessController;
 use Illuminate\Support\Facades\Route;
 
@@ -17,10 +18,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get("/", [HomeController::class, 'index']);
+Route::get('/', [HomeController::class, 'index']);
 
-Route::get('/voos', [FlightsController::class, 'voo']);
+Route::get('/voos', [FlightsController::class, 'voo'])->name('flights');
 
-Route::get('/pagamento', [PaymentController::class, 'pagar']);
+Route::get('/cadastro', [RegisterController::class, "create"])->name('user.register');
+
+Route::post('/cadastro', [RegisterController::class, "store"])->name('user.register');
+
+Route::get('/pagamento', [PaymentController::class, 'pagar'])->name('payment');
+
+Route::get('/passagens', [RegisterController::class, 'register'])->name('user.info');
 
 Route::get('/sucesso', [SuccessController::class, "pagamentoRealizado"]);

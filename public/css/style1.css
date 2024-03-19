@@ -1,0 +1,86 @@
+body {
+    background-color: #EEF5FF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15%;
+}
+
+.all_informations {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 30%;
+    padding: 35px;
+   
+}
+
+label {
+    padding: 0;
+    margin: 0;
+}
+
+input, button {
+    background-color: #B4D4FF;
+    padding: 7px;
+    margin-top: 2px;
+    border-radius: 5px;
+    border: 1px solid #0F1035;
+}
+
+.register {
+
+    display: grid;
+    gap: 30px;
+    grid-template-areas: 
+    "h2 h2 h2"
+    "name name name" 
+    "password password password"
+    "email email email"
+    "button button button"
+    ;
+    
+    
+}
+
+p {
+    color: #181616;
+    font-size: medium;
+    margin:0;
+    padding: 0;
+}
+
+h2 {
+    grid-area: h2;
+    text-align: center;
+    color: #181616;
+}
+
+
+.name {
+    grid-area: name;
+}
+
+.password {
+    grid-area: password;
+}
+
+.email {
+    grid-area: email;
+}
+
+button {
+    grid-area: button;
+    
+}
+
+.tamanho {
+    width: 100%;
+}
+
+button:hover {
+    scale: 1.05;
+    cursor: pointer;
+}
+
