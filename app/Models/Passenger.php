@@ -14,4 +14,6 @@ class Passenger extends Model
         'password',
         'email'
     ];
+
+    protected $table = 'passengers';
 }

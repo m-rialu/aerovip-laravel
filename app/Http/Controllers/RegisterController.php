@@ -14,10 +14,12 @@ class RegisterController extends Controller
     }
 
 
-function register()
+function index()
 {
     $passengers = Passenger::all();
     return view('pagamento', compact('passengers'));
+
+//  $passengers = Passenger::all();
 // return view ('passagem', compact('passengers'); <- com as outras telas
 
 }

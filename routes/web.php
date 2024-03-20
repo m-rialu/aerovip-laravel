@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [HomeController::class, 'index']);
+Route::get('/', [HomeController::class, 'inicial']);
 
 Route::get('/voos', [FlightsController::class, 'voo'])->name('flights');
 
@@ -28,6 +28,6 @@ Route::post('/cadastro', [RegisterController::class, "store"])->name('user.regis
 
 Route::get('/pagamento', [PaymentController::class, 'pagar'])->name('payment');
 
-Route::get('/passagens', [RegisterController::class, 'register'])->name('user.info');
+Route::get('/passagens', [RegisterController::class, 'index'])->name('user.info');
 
 Route::get('/sucesso', [SuccessController::class, "pagamentoRealizado"]);
