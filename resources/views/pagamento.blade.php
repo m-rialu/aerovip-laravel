@@ -14,10 +14,19 @@
 <body>
     <div class="all_informations">
 
+
         <form class="credit_card">
             <h2>Pagar com o Cartão</h2>
 
-                    <h1>{{ $passenger->name }}</h1>
+            <h3>Informações do passageiro</h3>
+            @foreach ($passengers->all() as $passenger)
+                <label class="dbname">
+                    <p>Nome: {{ $passenger->name }}</p>
+                </label>
+                <label class="email">
+                    <p>Email: {{ $passenger->email }}</p>
+                </label>
+            @endforeach
 
             <label class="numerocard">
                 <p>Número de passagens</p><input min="1" type="number" required class="tamanho">
@@ -37,12 +46,40 @@
             <label class="csc">
                 <p>Código de Segurança (CSC)</p><input type="password" maxlength="3" required class="tamanho">
             </label>
-            <button class="tamanho"><a href="./sucesso">Finalizar Pagamento</a></button>
+            <button class="tamanho"><a href="{{route('donePayment')}}">Finalizar Pagamento</a></button>
 
         </form>
 
 
     </div>
+    <div>
+        <tbody>
+
+        <h3>Informações da passagem</h3>
+            @foreach($cards->all() as $card)
+                <label >
+                    <p>Preço: {{ $card->price }}</p>
+                </label>
+                <label>
+                    <p>Data: {{ $card->date }}</p>
+                </label>
+                <label>
+                    <p>Local: {{ $card->local }}</p>
+                </label>
+                <label>
+                    <p>Horário: {{ $card->time }}</p>
+                </label>
+            @endforeach
+
+                    <form action="{{ route('cards.destroy', $card->id) }}" method="POST">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit">Deletar</button>
+                    </form>
+            </tbody>
+    </div>
+
+
 </body>
 
 </html>

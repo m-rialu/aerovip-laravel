@@ -1,10 +1,12 @@
 <?php
 
+use App\Http\Controllers\CardController;
 use App\Http\Controllers\FlightsController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\SuccessController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,17 +19,24 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+Route::get('/',[UserController::class,'showLogin'])->name('showLogin');
 
-Route::get('/', [HomeController::class, 'inicial']);
+Route::post('/',[UserController::class,'login'])->name('login');
+
+Route::get('/logout',[UserController::class, 'logout'])->name('logout')->middleware('auth');
+
+
+Route::get('/home', [HomeController::class, 'inicial'])->name('home');
 
 Route::get('/voos', [FlightsController::class, 'voo'])->name('flights');
 
-Route::get('/cadastro', [RegisterController::class, "create"])->name('user.register');
+Route::get('/cadastro', [RegisterController::class, "create"])->middleware('auth')->name('user.register');
 
-Route::post('/cadastro', [RegisterController::class, "store"])->name('user.register');
+Route::post('/cadastro', [RegisterController::class, "store"])->middleware('auth')->name('user.register');
 
-Route::get('/pagamento', [PaymentController::class, 'pagar'])->name('payment');
+Route::get('home/pagamento', [RegisterController::class, "index"])->name('payment');
 
-Route::get('/passagens', [RegisterController::class, 'index'])->name('user.info');
+Route::get('/sucesso', [SuccessController::class, "pagamentoRealizado"])->name('donePayment');
 
-Route::get('/sucesso', [SuccessController::class, "pagamentoRealizado"]);
+
+Route::delete('/cards/{id}', [CardController::class, 'destroy'])->name('cards.destroy');

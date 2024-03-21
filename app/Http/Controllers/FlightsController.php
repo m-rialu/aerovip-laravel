@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class FlightsController extends Controller
 {
-    function voo() {
+    public function voo() {
         return view("passagem");
     }
 }

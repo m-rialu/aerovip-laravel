@@ -8,6 +8,7 @@ body {
 
 .all_informations {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 30%;
@@ -33,12 +34,15 @@ input, button {
     display: grid;
     gap: 30px;
     grid-template-areas:
-    "h2 h2 h2"
-    "numbem numbem numbem"
-    "date date csc"
-    "name name name"
-    "numerocard numerocard numerocard"
-    "button button button "
+        "h2 h2 h2"
+        "h3 h3 h3"
+        "dbname dbname dbname"
+        "email email email"
+        "numbem numbem numbem"
+        "date date csc"
+        "name name name"
+        "numerocard numerocard numerocard"
+        "button button button "
     ;
 }
 
@@ -47,7 +51,7 @@ input, button {
 p {
     color: #181616;
     font-size: medium;
-    margin:0;
+    margin: 0;
     padding: 0;
 }
 
@@ -55,6 +59,13 @@ h2 {
     grid-area: h2;
     text-align: center;
     color: #181616;
+}
+
+h3 {
+    grid-area: h3;
+    text-align: center;
+    color: #181616;
+
 }
 
 span {
@@ -84,7 +95,23 @@ button {
 }
 
 .numerocard {
+    display: flex;
+    flex-direction: column;
     grid-area: numerocard;
+
+}
+
+.dbname {
+    display: flex;
+    align-items: center;
+    grid-area: auto;
+
+}
+
+.email {
+    display: flex;
+    align-items: center;
+    grid-area: auto;
 
 }
 
@@ -102,4 +129,3 @@ a {
 .tamanho {
     width: 100%;
 }
-

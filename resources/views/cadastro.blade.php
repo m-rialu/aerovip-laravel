@@ -18,17 +18,17 @@
             @csrf
             <h2>Cadastro</h2>
 
-            <label class="name">
-                <p>Nome</p><input type="text" required class="tamanho" min="1">
+            <label for="name" class="name">
+                <p>Nome</p><input name="name" type="text" required class="tamanho" min="1">
             </label>
-            <label class="password">
-                <p>Senha</p><input type="password" required class="tamanho">
+            <label for="password" class="password">
+                <p>Senha</p><input name="password" type="password" required class="tamanho">
             </label>
-            <label class="email">
-                <p>Email</p><input type="text" required class="tamanho">
+            <label for="email" class="email">
+                <p>Email</p><input name="email" type="text" required class="tamanho">
             </label>
 
-            <button type="submit" class="tamanho"><a href="{{route('user.info')}}">Finalizar cadastro</a></button>
+            <button type="submit" class="tamanho">Finalizar cadastro</button>
             <!-- <button type="submit" class="tamanho"><a href="{.{route('payment')}.}">Finalizar cadastro</a></button> -->
 
 
